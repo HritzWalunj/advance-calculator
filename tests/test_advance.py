@@ -1,4 +1,4 @@
-from advance_calculator.advance_calculator import power, square, average, percentage
+from advance_calculator.advance_calculator import power, square, cube, average, percentage
 
 def test_power():
     assert power(2 , 3) == 8
