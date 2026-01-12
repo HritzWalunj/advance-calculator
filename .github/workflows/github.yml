@@ -4,11 +4,11 @@ on: [push, pull_request]
 
 jobs:
   common-ci:
-    uses: HritzWalunj/common-ci-infra/.github/workflows/common-ci-pipeline.yml
+    uses: HritzWalunj/common-ci-infra/.github/workflows/common-ci-pipeline.yml@v1
     with:
       target_paths: |
         calculator
-        utils
+
 
   # test:
   #   runs-on: ubuntu-latest
