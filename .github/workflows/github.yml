@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   common-ci:
-    uses: HritzWalunj/common-ci-infra/.github/workflows/common-ci-pipeline.yml@v1
+    uses: HritzWalunj/common-ci-infra/.github/workflows/common-ci-pipeline.yml@main
     with:
       target_paths: |
         calculator
