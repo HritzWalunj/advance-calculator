@@ -7,28 +7,29 @@ jobs:
     uses: HritzWalunj/common-ci-infra/.github/workflows/common-ci-pipeline.yml@main
     with:
       target_paths: |
-        calculator
+        advance_calculator
+        tests
 
 
-  # test:
-  #   runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-latest
 
-  #   steps:
-  #     - name: Checkout advance-calculator
-  #       uses: actions/checkout@v4
+    steps:
+      - name: Checkout advance-calculator
+        uses: actions/checkout@v4
 
-  #     - name: Set up Python
-  #       uses: actions/setup-python@v5
-  #       with:
-  #         python-version: "3.10"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
 
-  #     - name: Install dependencies
-  #       run: |
-  #         python -m pip install --upgrade pip
-  #         pip install pytest
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
 
-  #     - name: Set PYTHONPATH
-  #       run: echo "PYTHONPATH=$PWD" >> $GITHUB_ENV
+      - name: Set PYTHONPATH
+        run: echo "PYTHONPATH=$PWD" >> $GITHUB_ENV
 
-  #     - name: Run pytest
-  #       run: pytest -v
+      - name: Run pytest
+        run: pytest -v
