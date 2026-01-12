@@ -1,14 +1,14 @@
 name: Pytest CI
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-  repository_dispatch:
-    types: [ demo-updated ]
+on: [push, pull_request]
 
 jobs:
+  pipeline:
+    uses: HritzWalunj/common-ci-infra/.github/workflows/common-ci-pipeline.yml
+    with:
+      project_type: "advance"
+      main_module: "calculator"
+
   test:
     runs-on: ubuntu-latest
 
