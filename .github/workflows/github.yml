@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   pipeline:
-    uses: HritzWalunj/common-ci-infra/.github/workflows/common-ci-pipeline.yml@v1
+    uses: HritzWalunj/common-ci-infra/.github/workflows/common-ci-pipeline.yml
     with:
       project_type: "advance"
       main_module: "calculator"
